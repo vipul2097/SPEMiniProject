@@ -23,7 +23,7 @@ pipeline {
 
         stage('Build Docker Images') {
             steps {
-               sh 'docker build -t vipul2097/SPEMiniProject/DockerFile:latest .'
+               sh 'sudo docker build -t vipul2097/SPEMiniProject:latest .'
             }
         }
 
