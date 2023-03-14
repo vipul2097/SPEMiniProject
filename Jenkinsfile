@@ -29,7 +29,7 @@ pipeline {
 
         stage('Publish Docker Images') {
                     steps {
-                        withDockerRegistry([ credentialsId: "vipul2097", url: "https://hub.docker.com/r/vipul2097/mini_dockerimage" ]) {
+                        withDockerRegistry([ credentialsId: "dockerhub", url: "https://hub.docker.com/r/vipul2097/mini_dockerimage" ]) {
                             sh 'docker push vipul2097/mini_dockerimage:latest'
                         }
                     }
