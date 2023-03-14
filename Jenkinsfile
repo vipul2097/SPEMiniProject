@@ -11,7 +11,7 @@ pipeline {
                 // Get code from a GitHub repository
                 // Make sure to add your own git url and credentialsId
 				git branch: 'master', url: 'https://github.com/vipul2097/SPEMiniProject.git',
-                credentialsId: 'gitid'
+                credentialsId: 'githubid'
             }
         }
         stage('Maven Build') {
