@@ -21,9 +21,15 @@ pipeline {
             }
         }
 
+        environment{
+          registry="vipul2097/SPEMiniProject"
+          registryCredentials="dockerhub"
+          dockerimage=''
+        }
+
         stage('Build Docker Images') {
             steps {
-                sh 'docker build -t vipul2097/SPEMiniProject:latest .'
+               dockerimage=docker.buildregistry+":latest"
             }
         }
 
