@@ -23,9 +23,7 @@ pipeline {
 
         stage('Build Docker Images') {
             steps {
-               script{
-               docker.build "vipul2097/speminiProject:latest"
-               }
+               sh 'docker build -t vipul2097/mini_dockerimage:latest .'
             }
         }
 
