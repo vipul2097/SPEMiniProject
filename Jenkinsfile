@@ -10,8 +10,7 @@ pipeline {
             steps {
                 // Get code from a GitHub repository
                 // Make sure to add your own git url and credentialsId
-				git url: 'https://github.com/vipul2097/SPEMiniProject.git',
-				branch: 'main',
+				git branch: 'master', url: 'https://github.com/vipul2097/SPEMiniProject.git',
                 credentialsId: 'gitid'
             }
         }
