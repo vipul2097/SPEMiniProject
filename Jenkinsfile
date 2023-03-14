@@ -5,12 +5,6 @@ pipeline {
 
 	agent any
 
-    environment{
-              registry="vipul2097/SPEMiniProject"
-              registryCredentials="dockerhub"
-              dockerimage=''
-            }
-
     stages {
         stage('Git Pull') {
             steps {
@@ -27,11 +21,9 @@ pipeline {
             }
         }
 
-
-
         stage('Build Docker Images') {
             steps {
-               dockerimage=docker.buildregistry+":latest"
+               docker.build "vipul2097/mini-docker:latest"
             }
         }
 
