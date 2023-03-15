@@ -32,13 +32,17 @@ pipeline {
         }
 
         stage('Publish Docker Images') {
-                    steps {
-                           withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-                                sh 'docker push vipul2097/mini_dockerimage:latest'
-                           }
-                        }
-                    }
+            steps {
+               withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
+               sh 'docker push vipul2097/mini_dockerimage:latest'
+              }
+            }
+         }
 
-
+         stage('Ansible Deploy'){
+            steps{
+              ansiblePlaybook colorized:true, disableHostKeyChecking:true, installation:'Ansible', inventory:'inventory', playbook:playbook.yml
+            }
+         }
     }
 }
