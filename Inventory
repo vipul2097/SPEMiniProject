@@ -1,0 +1,2 @@
+[ubuntu22.10]
+172.16.136.24 ansible_user=ansible_1
