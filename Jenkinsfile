@@ -5,6 +5,10 @@ pipeline {
 
 	agent any
 
+    environment{
+      registryCredentials="dockerhub"
+    }
+
     stages {
         stage('Git Pull') {
             steps {
@@ -30,7 +34,7 @@ pipeline {
         stage('Publish Docker Images') {
                     steps {
                          script{
-                            docker.withRegistry('', "dockerhub")
+                            docker.withRegistry('', registryCredentials)
                             dockerImage.push()
                          }
                         }
