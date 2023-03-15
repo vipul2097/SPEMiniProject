@@ -39,6 +39,12 @@ pipeline {
             }
          }
 
+         stage('Clean Docker Images') {
+            steps{
+              sh 'docker rmi -f vipul2097/mini_dockerimage:latest'
+            }
+         }
+
          stage('Ansible Deploy'){
             steps{
               ansiblePlaybook colorized:true, disableHostKeyChecking:true, installation:'Ansible', inventory:'inventory', playbook:'playbook.yml'
