@@ -1,14 +1,19 @@
 package org.example;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
 public class Calculator {
-    //private static final Logger logger = LogManager.getLogger(Calculator.class);
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
     public Calculator() {
     }
 
     public static void main(String[] args) {
+
 
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
@@ -70,30 +75,30 @@ public class Calculator {
 
 
     public double multiplication(double number1, double number2) {
-        //logger.info("[MULTIPLICATION - " + number1 + " AND " + number2);
+        logger.info("[MULTIPLICATION - " + number1 + " AND " + number2);
         double result = number1 * number2;
-        //logger.info("[RESULT - MULTIPLICATION] - " + result);
+        logger.info("[RESULT - MULTIPLICATION] - " + result);
         return result;
     }
 
     public double cuberoot(double number1) {
-        //logger.info("[CUBE ROOT] - " + number1);
+        logger.info("[CUBE ROOT] - " + number1);
         double result = Math.cbrt(number1);
-        //logger.info("[RESULT - CUBE ROOT] - " + result);
+        logger.info("[RESULT - CUBE ROOT] - " + result);
         return result;
     }
 
     public double square(double number1) {
-        //logger.info("[SQUARE] - " + number1);
+        logger.info("[SQUARE] - " + number1);
         double result = number1 * number1;
-        //logger.info("[RESULT - SQUARE] - " + result);
+        logger.info("[RESULT - SQUARE] - " + result);
         return result;
     }
 
     public double sub(double number1, double number2) {
-        //logger.info("[SUBTRACTION - " + number2 + " FROM " + number1);
+        logger.info("[SUBTRACTION - " + number2 + " FROM " + number1);
         double result = number1 - number2;
-        //logger.info("[RESULT - SUBTRACTION] - " + result);
+        logger.info("[RESULT - SUBTRACTION] - " + result);
         return result;
     }
 
