@@ -47,7 +47,7 @@ pipeline {
 
          stage('Ansible Deploy'){
             steps{
-              ansiblePlaybook colorized:true, disableHostKeyChecking:true, installation:'Ansible', inventory:'inventory', playbook:'playbook.yml'
+              ansiblePlaybook colorized:true, disableHostKeyChecking:true, installation:'Ansible', inventory:'Inventory', playbook:'playbook.yml'
             }
          }
     }
