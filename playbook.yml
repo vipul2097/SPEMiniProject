@@ -11,4 +11,4 @@
       shell: docker pull vipul2097/mini_dockerimage
 
     - name: running container
-      shell: docker run -it -d vipul2097/mini_dockerimage /bin/bash
+      shell: docker create -it vipul2097/mini_dockerimage

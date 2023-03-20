@@ -39,11 +39,11 @@ pipeline {
             }
          }
 
-         stage('Clean Docker Images') {
-            steps{
-              sh 'docker rmi -f vipul2097/mini_dockerimage'
-            }
-         }
+//          stage('Clean Docker Images') {
+//             steps{
+//               sh 'docker rmi -f vipul2097/mini_dockerimage'
+//             }
+//          }
 
          stage('Ansible Deploy'){
             steps{
