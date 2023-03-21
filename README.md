@@ -93,8 +93,3 @@ command: java -jar MiniProject-1.0-SNAPSHOT-jar-with-dependencies.jar - This spe
 
 Overall, this playbook defines a set of tasks that can be used to deploy and run a Docker container that runs a Java application. When executed on the hosts in the "containers" group, Ansible will pull the Docker image, start the container, and run the specified command inside the container.
 
-### META-INF/MANIFEST.MF
-META-INF/MANIFEST.MF is a file that contains metadata about a JAR file, including information about the contents of the JAR file and how it should be executed. It is a standard part of the JAR file format and is used by Java applications to define the entry point for the application and other important metadata.
-
-One of the key attributes that can be specified in the MANIFEST.MF file is the Main-Class attribute. This attribute specifies the fully-qualified name of the Java class that contains the main() method for the application. The main() method is the entry point for the Java application, and it is the method that is executed when the application is started.
-
