@@ -44,7 +44,7 @@ docker run -it vipul2097/mini_dockerimage
 ### Dockerfile
 This is a Dockerfile that defines how to build a Docker image for running a Java application. Here's a breakdown of what each line does:
 
-FROM openjdk - This line sets the base image for the Docker image to be built. In this case, it's an official OpenJDK 11 image from Docker Hub.
+FROM openjdk:11 - This line sets the base image for the Docker image to be built. In this case, it's an official OpenJDK 11 image from Docker Hub.
 
 COPY ./target/MiniProject-1.0-SNAPSHOT-jar-with-dependencies.jar ./ - This line copies the MiniProject-1.0-SNAPSHOT-jar-with-dependencies.jar file from the ./target directory (relative to the Dockerfile) into the root directory of the Docker image.
 
