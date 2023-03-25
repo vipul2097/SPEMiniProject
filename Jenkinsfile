@@ -41,7 +41,7 @@ pipeline {
 
          stage('Clean Docker Images') {
             steps{
-              sh 'docker rmi -f vipul2097/mini_dockerimage:<none>'
+              sh 'docker rmi -f vipul2097/mini_dockerimage'
             }
          }
 
