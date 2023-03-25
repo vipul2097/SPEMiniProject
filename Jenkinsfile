@@ -41,7 +41,10 @@ pipeline {
 
          stage('Clean Docker Images') {
             steps{
-              sh 'docker rmi --force $(docker images | grep "<none>" | awk '{print $3}')'
+            sh '''
+               # Remove all images with the tag <none>
+               docker rmi --force $(docker images | grep "<none>" | awk '{print $3}')
+            '''
             }
          }
 
