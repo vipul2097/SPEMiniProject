@@ -45,17 +45,17 @@ public class Caltest {
     }
 
 
-//    @Test
-//    public void powerTruePositive(){
-//        assertEquals("Finding subtraction of two number for True Positive", 8, calculator.power(2,3), DELTA);
-//        assertEquals("Finding subtraction of two number for True Positive", 9, calculator.power(3,2), DELTA);
-//    }
-//
-//    @Test
-//    public void powerFalsePositive(){
-//        assertNotEquals("Finding subtraction of two number for False Positive", 32, calculator.power(2,4), DELTA);
-//        assertNotEquals("Finding subtraction of two number for False Positive", 78, calculator.power(3,4), DELTA);
-//    }
+    @Test
+    public void powerTruePositive(){
+        assertEquals("Finding subtraction of two number for True Positive", 8, calculator.power(2,3), DELTA);
+        assertEquals("Finding subtraction of two number for True Positive", 9, calculator.power(3,2), DELTA);
+    }
+
+    @Test
+    public void powerFalsePositive(){
+        assertNotEquals("Finding subtraction of two number for False Positive", 32, calculator.power(2,4), DELTA);
+        assertNotEquals("Finding subtraction of two number for False Positive", 78, calculator.power(3,4), DELTA);
+    }
 
 
 
